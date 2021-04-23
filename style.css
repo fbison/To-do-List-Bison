@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(120deg, #04D960, #027368 );
+    color: white;
+    font-family: 'Noto Sans';
+    min-height: 100vh;
+}    
+
+header,
+form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+}
+
+form button{
+    color: #04D960;
+    background-color: white;
+    cursor:pointer;
+    transition:  all 0.3 ease;
+}
+
+form button:hover{
+    background: #04D960;
+    color: white;
+}
+
+.list-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.to-do-list{
+    list-style: none;
+    min-width: 30%;
+}
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5 rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.todo li{
+    flex:1;
+}
+
+.delete-btn,
+.complete-btn{
+    background-color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.delete-btn{
+    color: red;
+}
+
+.complete-btn{
+    color: #04D960;
+}
+.to-do-item{
+    padding: 0rem 0.5rem;
+}
+
+/*evitar que o clique no simbolo seja diferente do clique do botão*/
+
+.fa-trash-alt,
+.fa-check-circle{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.deleteAnimation{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none; /*firefox*/
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #04D960;
+    cursor: pointer;
+    width: 10rem;
+    padding: 1rem;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #04D960;
+    top:0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+}
+.select:hover::after{
+    color: #04D960;
+    background: white;
+}
